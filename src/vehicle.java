@@ -13,6 +13,9 @@ class audi extends vehicle {
     void honk(){
         System.out.println("Honks loud");
     }
+    void body(){
+        System.out.println(doors+" d")
+    }
 }
 class Types extends audi {
     String type;
@@ -30,13 +33,17 @@ class BMW extends vehicle{
 final class specifics extends Types {
     String color ;
     int size ;
-    specifics(String color,int size){
+    specifics(String color,int size,String type,String material){
+        super(type,material);
         this.color=color;
         this.size=size;
     }
 }
 class main{
     public static void main(String[] args){
+Types CAR1=new specifics("White",180,"electric","metal");
+CAR1.action();
+CAR1.honk();
 
     }
 
