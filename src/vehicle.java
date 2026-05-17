@@ -1,11 +1,22 @@
+import java.util.Scanner;
+
 class vehicle{
     final void action(){
         System.out.println("vehicle moving");
     }
 }
 class audi extends vehicle {
-    int doors =4;
-    int whiles =4;
+   private int doors =4;
+    private int whiles =4;
+    int getdoors(){return this.doors;
+
+    }
+    int getWhiles(){return this.whiles;
+
+    }
+    void display (){
+        System.out.println(getdoors()+"doors and "+getWhiles()+" whiles");
+    }
 
     String material;
     void honk(){
@@ -32,14 +43,21 @@ class BMW extends Types{
         System.out.println("Honks genteelly");
     }
 }
-final class specifics extends Types {
-    String color ;
-    int size ;
-    specifics(String color,int size,String type,String material){
-        super(type,material);
-        this.color=color;
-        this.size=size;
+class specifics   {
+    void returnn (){
+        System.out.println("you have ordered  a car with specifications mentioned: "  );
     }
+    void userinput() {
+        Scanner take = new Scanner(System.in);
+        System.out.println("what is your color choice:");
+        String color = take.next();
+        System.out.println("what is your size choice:");
+        int size = take.nextInt();
+
+       System.out.println(color );
+        System.out.println(size );
+    }
+
 }
 
 
